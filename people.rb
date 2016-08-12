@@ -1,20 +1,20 @@
 class Person
 
-attr_writer :name
+attr_accessor :name
 
   def initialize(name)
     @name = name
   end
 
   def greeting
-    "hi my #{@name}is"
+  puts "hi im #{@name} "
   end
 end
 
 class Student < Person
 
   def learn
-    "i get it"
+  puts  "i get it"
   end
 
 end
@@ -22,10 +22,16 @@ end
 class Instructor < Person
 
   def teach
-    "everything in ruby is an object"
+  puts  "everything in ruby is an object"
   end
 end
 
 
 chris = Instructor.new("chris")
-cristina = Student.new("chris")
+cristina = Student.new("cristina")
+
+chris.greeting
+cristina.greeting
+
+chris.teach
+cristina.learn
