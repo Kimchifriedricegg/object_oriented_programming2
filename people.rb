@@ -6,20 +6,26 @@ attr_writer :name
     @name = name
   end
 
-
-  class Student < Person
-
-    def learn
-    "i get it"
-    end
+  def greeting
+    "hi my #{@name}is"
   end
+end
 
-  class Instructor < Person
+class Student < Person
 
-    def teach
-    "everything in ruby is an object"
-    end
-
+  def learn
+    "i get it"
   end
 
 end
+
+class Instructor < Person
+
+  def teach
+    "everything in ruby is an object"
+  end
+end
+
+
+chris = Instructor.new("chris")
+cristina = Student.new("chris")
