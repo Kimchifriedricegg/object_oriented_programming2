@@ -1,14 +1,25 @@
-class Student
-end
+class Person
 
-  def learn
+attr_writer :name
+
+  def initialize(name)
+    @name = name
+  end
+
+
+  class Student < Person
+
+    def learn
     "i get it"
+    end
   end
 
-class Instructor
+  class Instructor < Person
 
-  def teach
+    def teach
     "everything in ruby is an object"
+    end
+
   end
-  
+
 end
